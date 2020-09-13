@@ -1,0 +1,11 @@
+.filter {
+    display: flex;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    flex-direction: column;
+    background-color: white;
+    .title {
+        font-weight: 700;
+        color: crimson;
+    }
+}

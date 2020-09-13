@@ -1,0 +1,11 @@
+<div class="row m-0">
+    <div class="col-md-3">
+        <app-filter></app-filter>
+    </div>
+    <div class="col-md-9">
+        <div class="row m-0">
+            <app-card *ngFor="let mission of data" class="col-md-3" [data]="mission"></app-card>
+        </div>
+        
+    </div>
+</div>

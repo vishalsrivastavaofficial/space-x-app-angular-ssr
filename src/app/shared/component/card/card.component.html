@@ -1,0 +1,17 @@
+<div class="card p-1">
+    <img class="card-img-top"
+        [src]="data.links.mission_patch ? data.links.mission_patch : 'https://via.placeholder.com/150'"
+        alt="Card image cap">
+    <div class="card-body">
+        <div class="title">{{data.mission_name}}#{{data.flight_number}}</div>
+        <div><span class="sub-title">Mission Ids: </span>
+            <ul *ngIf="data.mission_id.length != 0" class="m-0">
+                <li *ngFor="let ids of data.mission_id" class="m-0">{{ids}}</li>
+            </ul>
+        </div>
+        <div> <span class="sub-title">Launch Year:</span> {{data.launch_year}}</div>
+        <div><span class="sub-title">Successful Launch:</span> {{data.launch_success}}</div>
+        <div><span class="sub-title">Successful Landing: </span>{{data.launch_landing ? data.launch_landing : 'NA'}}
+        </div>
+    </div>
+</div>
