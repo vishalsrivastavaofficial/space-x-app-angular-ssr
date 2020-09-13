@@ -10,7 +10,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,10 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-    MatButtonToggleModule,
-    HttpClientModule
+    MatButtonToggleModule
   ],
   exports: [HeaderComponent, FooterComponent, FilterComponent, CardComponent,
-    MatButtonModule, MatToolbarModule, MatCardModule, MatButtonToggleModule, HttpClientModule]
+    MatButtonModule, MatToolbarModule, MatCardModule, MatButtonToggleModule]
 })
 export class SharedModule { }
