@@ -8,7 +8,11 @@ export class DashboardDataService {
 
   constructor(private http: HttpClient) { }
 
-  getInformation() {
-    return this.http.get('https://api.spacexdata.com/v3/launches?limit=100') 
+  getInformation(filteredYear?, launchSuccess?, landSuccess?) {
+    let parameterUrl = "";
+    parameterUrl += filteredYear? '&launch_year='+ filteredYear : '';
+    parameterUrl += launchSuccess? '&launch_success='+ launchSuccess : '';
+    parameterUrl += landSuccess? '&land_success='+ landSuccess : '';
+    return this.http.get('https://api.spacexdata.com/v3/launches?limit=100'+ parameterUrl) 
   }
 }

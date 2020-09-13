@@ -16,4 +16,8 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  setData(filteredData) {
+    this.data = filteredData;
+  }
+
 }
